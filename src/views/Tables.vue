@@ -1,21 +1,21 @@
 <template>
-    <v-container>
-        <v-card>
-            <v-data-table
-                :headers="headers"
-                :items="desserts"
-                :items-per-page="5"
-                class="elevation-1"
-            ></v-data-table>
-            <v-data-table
-                :headers="headers"
-                :items="desserts"
-                :items-per-page="5"
-                class="elevation-1 mt-5"
-                dark
-            ></v-data-table>
-        </v-card>
-    </v-container>
+  <v-container>
+    <v-card>
+      <v-data-table
+        :headers="headers"
+        :items="desserts"
+        :items-per-page="5"
+        class="elevation-1"
+      />
+      <v-data-table
+        :headers="headers"
+        :items="desserts"
+        :items-per-page="5"
+        class="elevation-1 mt-5"
+        dark
+      />
+    </v-card>
+  </v-container>
 </template>
 
 <script>

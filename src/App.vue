@@ -6,11 +6,10 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="drawer = !drawer" />
       </div>
 
-      <v-spacer></v-spacer>
-
+      <v-spacer />
     </v-app-bar>
 
     <v-navigation-drawer
@@ -18,7 +17,7 @@
       dark
       app
       :src="require('@/assets/sidebar.jpg')"
-      >
+    >
       <!-- #img === v-slot:img -->
       <template
         #img="props"
@@ -26,9 +25,7 @@
         <v-img
           :gradient="gredient"
           v-bind="props"
-          >
-        </v-img>
-
+        />
       </template>
       <v-list-item>
         <v-list-item-content>
@@ -41,7 +38,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <v-spacer />
 
       <v-list
         dense
@@ -66,9 +63,9 @@
       </v-list>
     </v-navigation-drawer>
 
-      <v-main>
-        <v-container fluid>
-          <router-view/>
+    <v-main>
+      <v-container fluid>
+        <router-view />
       </v-container>
     </v-main>
   </v-app>
