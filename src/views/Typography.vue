@@ -6,7 +6,7 @@
             </v-card-title>
             <v-card-text>
                 <!-- 프라이머리 색상등 기존에 가지고 있는 지정 색상을 변경하고 싶으면 vuetify.js 파일로 가서 vuetify.js 사이트에 있는 preset의 속성 값을 재정의하면 된다
-                또한 vuetify.js 사이트에서 color를 검색하면 사용할 수 있는 다양한 팔레트가 존재-->
+                또한 vuetify.js 사이트에서 color를 검색하면 사용할 수 있는 다양한 팔레트가 존재 컬레에 대해 모르는 부분 있으면 공식문서를 가서 뒤져보면 될 일인것 같다-->
                 <v-card class="pa-3 text-h2 primary lighten-1">
                     컨텐츠
                 </v-card>
