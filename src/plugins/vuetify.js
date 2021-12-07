@@ -7,8 +7,6 @@ Vue.use(Vuetify);
 
 const theme = {
     primary: colors.deepOrange,
-    secondary: colors.red.lighten4, // #FFCDD2
-    accent: colors.indigo.base, // #3F51B5
 };
 
 export default new Vuetify({
