@@ -24,6 +24,50 @@
         </v-col>
       </v-row>
     </v-card>
+    <v-card class="mt-5 pa-3">
+      <v-card-title>
+        Button Size
+      </v-card-title>
+      <v-row>
+        <v-col cols="auto">
+          <v-btn
+            class="orange"
+            x-small
+          >
+            x-small
+          </v-btn>
+        </v-col>
+        <v-col cols="auto">
+          <v-btn
+            class="orange"
+            small
+          >
+            small
+          </v-btn>
+        </v-col>
+        <v-col cols="auto">
+          <v-btn class="orange">
+            default
+          </v-btn>
+        </v-col>
+        <v-col cols="auto">
+          <v-btn
+            class="orange"
+            large
+          >
+            large
+          </v-btn>
+        </v-col>
+        <v-col cols="auto">
+          <v-btn
+            class="orange"
+            x-large
+          >
+            x-large
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-card>
   </v-container>
 </template>
 
