@@ -57,7 +57,7 @@ const routes = [
     },
     {
         path: '/authentication',
-        component: () => import( '@/layouts/default/Index'),
+        component: () => import( '@/layouts/authentication/Index'),
         children: [
           {
               path: 'sign-in',

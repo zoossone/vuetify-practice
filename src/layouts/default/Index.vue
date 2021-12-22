@@ -9,12 +9,15 @@
 </template>
 
 <script>
+import DefaultBar from './AppBar.vue';
+import DefaultDrawer from './Drawer.vue';
+import DefaultView from './View.vue';
   export default {
     name: 'DefaultLayout',
     components: {
-      DefaultBar: () => import('./AppBar'),
-      DefaultDrawer: () => import('./AppBar'),
-      DefaultView: () => import('./View')
+      DefaultBar,
+      DefaultDrawer,
+      DefaultView
     },
     data: () => ({
       drawer: false,
