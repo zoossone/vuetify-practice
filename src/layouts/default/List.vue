@@ -22,13 +22,11 @@
 </template>
 
 <script>
-import DefaultListGroup from './ListGroup.vue';
-import DefaultListItem from './ListItem.vue';
   export default {
     name: 'DefaultList',
     components: {
-      DefaultListItem,
-      DefaultListGroup
+      DefaultListItem: () => import('./ListItem'),
+      DefaultListGroup: () => import('./ListGroup')
     },
     props: {
       items: {

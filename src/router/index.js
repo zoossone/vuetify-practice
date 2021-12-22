@@ -1,99 +1,84 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Dashboard from '@/views/Dashboard';
-import GridSystem from '@/views/GridSystem';
-import GridListPage from '@/views/GridListPage';
-import Breakpoints from '@/views/Breakpoints';
-import Typography from '@/views/Typography';
-import Tables from '@/views/Tables';
-import Forms from '@/views/Forms';
-import Buttons from '@/views/Buttons';
-import Icons from '@/views/Icons';
-import SignIn from '@/views/authentication/SignIn';
-import SignUp from '@/views/authentication/SignUp';
-import ProductList from '@/views/page/ProductList';
-import DefaultLayout from '@/layouts/default/Index';
-import PageLayout from '@/layouts/page/Index';
-import AuthenticationLayout from '@/layouts/authentication/Index';
 
 Vue.use(VueRouter);
 
 const routes = [
     {
         path: '/',
-        component: DefaultLayout,
+        component: () => import( '@/layouts/default/Index'),
         children: [
           {
               path: '/',
               name: 'Dashboard',
-              component: Dashboard
+              component: () => import( '@/views/Dashboard'),
           },
           {
               path: '/grid-system',
               name: 'GridSystem',
-              component: GridSystem
+              component: () => import( '@/views/GridSystem'),
           },
           {
               path: '/grid-list-page',
               name: 'GridList',
-              component: GridListPage
+              component: () => import( '@/views/GridListPage'),
           },
           {
               path: '/breakpoints',
               name: 'Breakpoints',
-              component: Breakpoints
+              component: () => import( '@/views/Breakpoints'),
           },
           {
               path: '/typography',
               name: 'Typography',
-              component: Typography
+              component: () => import( '@/views/Typography'),
           },
           {
               path: '/tables',
               name: 'Tables',
-              component: Tables
+              component: () => import( '@/views/Tables'),
           },
           {
               path: '/forms',
               name: 'Forms',
-              component: Forms
+              component: () => import( '@/views/Forms'),
           },
           {
               path: '/buttons',
               name: 'Buttons',
-              component: Buttons
+              component: () => import( '@/views/Buttons'),
           },
           {
               path: '/icons',
               name: 'Icons',
-              component: Icons
+              component: () => import( '@/views/Icons'),
           },
         ]
     },
     {
         path: '/authentication',
-        component: AuthenticationLayout,
+        component: () => import( '@/layouts/default/Index'),
         children: [
           {
               path: 'sign-in',
               name: 'SignIn',
-              component: SignIn
+              component: () => import( '@/views/authentication/SignIn'),
           },
           {
               path: 'sign-up',
               name: 'SignUp',
-              component: SignUp
+              component: () => import( '@/views/authentication/SignUp'),
           },
         ]
     },
     {
         path: '/page',
-        component: PageLayout,
+        component: () => import('@/layouts/page/Index'),
         children: [
           {
               path: 'product-list',
               name: 'ProductList',
-              component: ProductList
+              component: () => import( '@/views/page/ProductList'),
           },
         ]
     },

@@ -26,11 +26,10 @@
 </template>
 
 <script>
-import DeafaultListItem from './ListItem.vue';
   export default {
     name: 'DefaultListGroup',
     components: {
-      DeafaultListItem
+      DeafaultListItem: () => import('./ListItem.vue')
     },
     props: {
       item: {

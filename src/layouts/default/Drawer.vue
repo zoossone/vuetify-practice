@@ -24,13 +24,11 @@
 </template>
 
 <script>
-import DefaultList from './List.vue';
-import DefaultDrawerHeader from './DrawerHeader.vue';
   export default {
     name: 'DefaultDrawer',
     components: {
-      DefaultDrawerHeader,
-      DefaultList
+      DefaultDrawerHeader: () => import('./DrawerHeader'),
+      DefaultList: () => import('./List'),
     },
     data: () => ({
       gredient: 'rgba(0, 0, 0, .7), rgba(0, 0, 0 , .7)',
