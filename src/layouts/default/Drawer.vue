@@ -14,61 +14,43 @@
         v-bind="props"
       />
     </template>
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title class="text-h6">
-          Application
-        </v-list-item-title>
-        <v-list-item-subtitle>
-          subtext
-        </v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+
+    <default-drawer-header />
 
     <v-spacer />
 
-    <v-list
-      dense
-      nav
-    >
-      <v-list-item
-        v-for="item in items"
-        :key="item.title"
-        link
-        :to="item.to"
-        active-class="primary"
-        class="py-1"
-      >
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
+    <default-list :items="items" />
   </v-navigation-drawer>
 </template>
 
 <script>
+import DefaultList from './List.vue';
+import DefaultDrawerHeader from './DrawerHeader.vue';
   export default {
     name: 'DefaultDrawer',
+    components: {
+      DefaultDrawerHeader,
+      DefaultList
+    },
     data: () => ({
-      gredient: 'rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)',
+      gredient: 'rgba(0, 0, 0, .7), rgba(0, 0, 0 , .7)',
       items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
-          { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system' },
-          { title: 'Grid List Page', icon: 'mdi-view-dashboard', to: '/grid-list-page' },
-          { title: 'Breakpoints', icon: 'mdi-view-dashboard', to: '/breakpoints' },
-          { title: 'Typography', icon: 'mdi-view-dashboard', to: '/typography' },
-          { title: 'Tables', icon: 'mdi-view-dashboard', to: '/tables' },
-          { title: 'Forms', icon: 'mdi-view-dashboard', to: '/forms' },
-          { title: 'Buttons', icon: 'mdi-view-dashboard', to: '/buttons' },
-          { title: 'Icons', icon: 'mdi-view-dashboard', to: '/icons' },
-          { title: 'SignIn', icon: 'mdi-login', to: '/authentication/sign-in' },
-          { title: 'SignUp', icon: 'mdi-logout', to: '/authentication/sign-up' },
-          { title: 'ProductList', icon: 'mdi-reproduction', to: '/page/product-list' },
+          { title: 'Pages', icon: 'mdi-menu', items: [
+            { title: 'Authentication', icon: 'mdi-login', items: [
+              { title: 'SignIn', icon: 'mdi-login', to: '/authentication/sign-in' },
+              { title: 'SignUp', icon: 'mdi-logout', to: '/authentication/sign-up' },
+            ] },
+            { title: 'ProductList', icon: 'mdi-reproduction', to: '/page/product-list' },
+          ] },
+          { title: 'Grid System', icon: 'mdi-grid', to: '/grid-system' },
+          { title: 'Grid List Page', icon: 'mdi-view-list-outline', to: '/grid-list-page' },
+          { title: 'Breakpoints', icon: 'mdi-responsive', to: '/breakpoints' },
+          { title: 'Typography', icon: 'mdi-format-text-variant', to: '/typography' },
+          { title: 'Tables', icon: 'mdi-table-settings', to: '/tables' },
+          { title: 'Forms', icon: 'mdi-form-select', to: '/forms' },
+          { title: 'Buttons', icon: 'mdi-gesture-tap-button', to: '/buttons' },
+          { title: 'Icons', icon: 'mdi-emoticon-excited-outline', to: '/icons' },
         ],
     })
   }
