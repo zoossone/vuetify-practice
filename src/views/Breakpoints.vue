@@ -62,7 +62,7 @@
     </v-card>
     <v-card class="mt-5">
       <v-card-title>
-        Vuetify Breakpoint Objeect
+        Vuetify Breakpoint Object
       </v-card-title>
       <v-container class="grey lighten-3">
         <v-card
