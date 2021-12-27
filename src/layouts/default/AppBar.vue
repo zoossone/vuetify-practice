@@ -16,11 +16,13 @@
   export default {
     name: 'DefaultBar',
     computed: {
-      get () {
-        return this.$store.getters['app/getDrawer'];
-      },
-      set (value) {
-        return this.$store.dispatch('app/toogleDrawer', value);
+      drawer: {
+        get () {
+          return this.$store.getters['app/getDrawer'];
+        },
+        set (value) {
+          return this.$store.dispatch('app/toogleDrawer', value);
+        }
       }
     }
   }
