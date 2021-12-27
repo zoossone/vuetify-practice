@@ -46,7 +46,10 @@
           { title: 'Breakpoints', icon: 'mdi-responsive', to: '/breakpoints' },
           { title: 'Typography', icon: 'mdi-format-text-variant', to: '/typography' },
           { title: 'Tables', icon: 'mdi-table-settings', to: '/tables' },
-          { title: 'Forms', icon: 'mdi-form-select', to: '/forms' },
+          { title: 'Forms', icon: 'mdi-form-select', items: [
+            { title: 'Validation Form', icon: 'mdi-format-list-checkbox', to: '/forms/validation-form' },
+            { title: 'App Form', icon: 'mdi-format-list-bulleted-type', to: '/forms/app-form' },
+          ] },
           { title: 'Buttons', icon: 'mdi-gesture-tap-button', to: '/buttons' },
           { title: 'Icons', icon: 'mdi-emoticon-excited-outline', to: '/icons' },
         ],

@@ -39,9 +39,14 @@ const routes = [
               component: () => import( '@/views/Tables'),
           },
           {
-              path: '/forms',
-              name: 'Forms',
-              component: () => import( '@/views/Forms'),
+              path: '/forms/validation-form',
+              name: 'ValidationForm',
+              component: () => import( '@/views/forms/ValidationForm'),
+          },
+          {
+              path: '/forms/app-form',
+              name: 'AppForm',
+              component: () => import( '@/views/forms/AppForm'),
           },
           {
               path: '/buttons',

@@ -96,7 +96,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Forms',
   data: () => ({
