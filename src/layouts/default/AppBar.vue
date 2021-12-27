@@ -5,7 +5,7 @@
     dark
   >
     <div class="d-flex align-center">
-      <v-app-bar-nav-icon @click="$emit('drawer')" />
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
     </div>
 
     <v-spacer />
@@ -14,7 +14,15 @@
 
 <script>
   export default {
-    name: 'DefaultBar'
+    name: 'DefaultBar',
+    computed: {
+      get () {
+        return this.$store.getters['app/getDrawer'];
+      },
+      set (value) {
+        return this.$store.dispatch('app/toogleDrawer', value);
+      }
+    }
   }
 </script>
 
