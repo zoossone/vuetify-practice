@@ -34,9 +34,14 @@ const routes = [
               component: () => import( '@/views/Typography'),
           },
           {
-              path: '/tables',
-              name: 'Tables',
-              component: () => import( '@/views/Tables'),
+              path: '/tables/basic-table',
+              name: 'Basic Table',
+              component: () => import( '@/views/table/BasicTable'),
+          },
+          {
+              path: '/tables/app-table',
+              name: 'App Table',
+              component: () => import( '@/views/table/AppTable'),
           },
           {
               path: '/forms/validation-form',

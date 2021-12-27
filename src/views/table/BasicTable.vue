@@ -1,19 +1,24 @@
 <template>
   <v-container>
     <v-card>
-      <v-data-table
-        :headers="headers"
-        :items="desserts"
-        :items-per-page="5"
-        class="elevation-1"
-      />
-      <v-data-table
-        :headers="headers"
-        :items="desserts"
-        :items-per-page="5"
-        class="elevation-1 mt-5"
-        dark
-      />
+      <v-card-title>
+        Tables
+      </v-card-title>
+      <v-card-text>
+        <v-data-table
+          :headers="headers"
+          :items="desserts"
+          :items-per-page="5"
+          class="elevation-1"
+        />
+        <v-data-table
+          :headers="headers"
+          :items="desserts"
+          :items-per-page="5"
+          class="elevation-1 mt-5"
+          dark
+        />
+      </v-card-text>
     </v-card>
   </v-container>
 </template>

@@ -45,7 +45,10 @@
           { title: 'Grid List Page', icon: 'mdi-view-list-outline', to: '/grid-list-page' },
           { title: 'Breakpoints', icon: 'mdi-responsive', to: '/breakpoints' },
           { title: 'Typography', icon: 'mdi-format-text-variant', to: '/typography' },
-          { title: 'Tables', icon: 'mdi-table-settings', to: '/tables' },
+          { title: 'Tables', icon: 'mdi-table-settings', items: [
+            { title: 'Basic Table', icon: 'mdi-format-list-checkbox', to: '/tables/basic-table' },
+            { title: 'App Table', icon: 'mdi-format-list-bulleted-type', to: '/tables/app-table' },
+          ] },
           { title: 'Forms', icon: 'mdi-form-select', items: [
             { title: 'Validation Form', icon: 'mdi-format-list-checkbox', to: '/forms/validation-form' },
             { title: 'App Form', icon: 'mdi-format-list-bulleted-type', to: '/forms/app-form' },
