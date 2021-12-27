@@ -15,8 +15,8 @@ const state = {
       { title: 'Breakpoints', icon: 'mdi-responsive', to: '/breakpoints' },
       { title: 'Typography', icon: 'mdi-format-text-variant', to: '/typography' },
       { title: 'Tables', icon: 'mdi-table-settings', items: [
-        { title: 'Basic Table', icon: 'mdi-format-list-checkbox', to: '/tables/basic-table' },
-        { title: 'App Table', icon: 'mdi-format-list-bulleted-type', to: '/tables/app-table' },
+        { title: 'Basic Table', icon: 'mdi-file-table-box', to: '/tables/basic-table' },
+        { title: 'App Table', icon: 'mdi-file-table-box-multiple', to: '/tables/app-table' },
       ] },
       { title: 'Forms', icon: 'mdi-form-select', items: [
         { title: 'Validation Form', icon: 'mdi-format-list-checkbox', to: '/forms/validation-form' },
